@@ -1,11 +1,11 @@
 ## Лабораторная работа 4. Повышение резкости изображений.
 
-Исходное изображение - [img.jpg](https://github.com/IvanHattler/Practice03/blob/master/src/main/resources/img.jpg)
+Исходное изображение - [img.jpg](https://github.com/IvanHattler/Practice04/blob/master/src/main/resources/img.jpg)
 
-Результаты обработки - [result](https://github.com/IvanHattler/Practice03/tree/master/result)
+Результаты обработки - [result](https://github.com/IvanHattler/Practice04/tree/master/result)
 
 ### Гауссово размытие
-Алгоритм представлен в классе [GaussianBlur.java](https://github.com/IvanHattler/Practice03/blob/master/src/main/java/GaussianBlur.java).
+Алгоритм представлен в классе [GaussianBlur.java](https://github.com/IvanHattler/Practice04/blob/master/src/main/java/GaussianBlur.java).
 
 Ниже приведен фрагмент кода, осуществляющий размытие по одному из указанных направление:
 ```
@@ -38,7 +38,7 @@
       }
   }
 ```
-Результат работы: [/result/gaussian/result.jpg](https://github.com/IvanHattler/Practice03/tree/master/result/gaussian/result.jpg)
+Результат работы: [/result/gaussian/result.jpg](https://github.com/IvanHattler/Practice04/tree/master/result/gaussian/result.jpg)
 
 ### Функция повышения резкости методом усиления границ
 Данная функция применяет Гауссово размытие повторно и вычитает результат из оригинального изображения. Таким образом получается "маска" с усиленными границами, которая прибавляется к исходному изображение. 
@@ -54,7 +54,7 @@
       return result;
   }
 ```
-Результат работы: [/result/sharp/result.jpg](https://github.com/IvanHattler/Practice03/tree/master/result/sharp/result2.jpg)
+Результат работы: [/result/sharp/result.jpg](https://github.com/IvanHattler/Practice04/tree/master/result/sharp/result2.jpg)
 
 ### Библиотечные функции повышения резкости
 В качестве сторонней библиотеки была выбрана популярная OpenCV.
@@ -71,7 +71,7 @@
       save(result, "result/sharpLib1", "result", FORMAT);
   }
 ```
-Результат работы: [/result/sharpLib1/result.jpg](https://github.com/IvanHattler/Practice03/tree/master/result/sharpLib1/result.jpg)
+Результат работы: [/result/sharpLib1/result.jpg](https://github.com/IvanHattler/Practice04/tree/master/result/sharpLib1/result.jpg)
 
 #### Вторая функция
 В этом способе повышения резкости ипользуется функция 2D-фильтрации и сверточная матрица, часто называемая ядром. 
@@ -92,4 +92,4 @@
       save(result, "result/sharpLib2", "result", FORMAT);
   }
 ```
-Результат работы: [/result/sharpLib2/result.jpg](https://github.com/IvanHattler/Practice03/tree/master/result/sharpLib2/result.jpg)
+Результат работы: [/result/sharpLib2/result.jpg](https://github.com/IvanHattler/Practice04/tree/master/result/sharpLib2/result.jpg)
